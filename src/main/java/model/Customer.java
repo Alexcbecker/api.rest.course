@@ -27,9 +27,11 @@ public class Customer {
 	
 	private static final long serialVersionUID = 1099189656054852009L;
 	
-	@Column(length = 11)
+	@Column(length = 11, updatable = false, nullable = false,
+			name = "cadastropessoafisica", unique = true)
 	private String cpf;
 	
+	@Column(length = 50)
 	private String name;
 	
 	@Temporal(TemporalType.DATE)
